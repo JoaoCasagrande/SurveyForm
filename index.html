@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Survey Form</title>
+    <head>
+    <body>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+        <form id="survey-form">
+            <fieldset>
+                <label id="name-label" for="name">
+                    Name
+                    <input id="name" class="formcontrol" type="text" placeholder="Enter your name" required >
+                </label>
+
+                <label id="email-label" for="email">
+                    Email
+                    <input id="email" class="formcontrol" type="email" placeholder="Enter your Email" required >
+                </label>
+
+                <label id="number-label" for="number">
+                    Age <span>(optional)</span>
+                    <input id="number" class="formcontrol" type="number" placeholder="Age" min="12" max="120" >
+                </label>
+
+                <label id="dropdown-label" for="dropdown">
+                    Which option best describes your current role? 
+                    <select id="dropdown"  class="formcontrol">
+                        <option>Select your current role</option>
+                        <option>Developer</option>
+                        <option>Designer</option>
+                        <option>Tech Leader</option>
+                        <option>Reviewer</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <label class="radio-label" for="suggest-definitely">
+                    <input 
+                        id="suggest-definitely" 
+                        name="suggest" 
+                        type="radio" 
+                        value="definitely" 
+                        checked
+                    >
+                    Definitely
+                </label>
+                <label class="radio-label" for="suggest-maybe">
+                    <input 
+                        id="suggest-maybe"
+                        name="suggest" 
+                        type="radio" 
+                        value="maybe" 
+                    >
+                    Maybe
+                </label>
+                <label class="radio-label" for="suggest-notsure">
+                    <input 
+                        id="suggest-notsure"
+                        name="suggest" 
+                        type="radio" 
+                        value="notsure"
+                    >
+                    Not sure
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What would you like to see improved? (Check all that apply)</legend>
+                <label class="check-label" for="frontend">
+                    <input 
+                        id="frontend"
+                        name="frontend" 
+                        type="checkbox" 
+                        value="frontend"
+                    >
+                    Front-end Projects
+                </label>
+                <label class="check-label" for="backend">
+                    <input 
+                        id="backend"
+                        name="backend" 
+                        type="checkbox" 
+                        value="backend"
+                    >
+                    Back-end Projects
+                </label>
+                <label class="check-label" for="opensource">
+                    <input 
+                        id="opensource"
+                        name="opensource" 
+                        type="checkbox" 
+                        value="opensource"
+                    >
+                    Open Source Community
+                </label>
+                <label class="check-label" for="wiki">
+                    <input 
+                        id="wiki"
+                        name="wiki" 
+                        type="checkbox" 
+                        value="wiki"
+                    >
+                    Wiki
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="suggestion-area">
+                    Any comments or suggestions?
+                    <textarea 
+                        id="suggestion-area"
+                        class="formcontrol"
+                        name="suggestion-area"
+                        rows="8"
+                        cols="30"
+                        placeholder="Enter your comment here..."
+                    ></textarea>
+                </label>
+            </fieldset>
+            
+            <button id="submit" name="submit" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
